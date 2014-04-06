@@ -1,0 +1,11 @@
+.DS_Store
+.agignore
+node_modules
+bower_components
+/selenium
+/coverage
+/app/assets
+nbproject
+config
+www/bower_components
+platforms

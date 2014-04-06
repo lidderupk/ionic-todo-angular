@@ -1,0 +1,8 @@
+{
+  "name": "ionic-project",
+  "directory": "www/bower_components",
+  "private": "true",
+  "dependencies": {
+    "underscore" : "1.6.0"
+  }
+}
