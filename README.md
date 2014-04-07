@@ -6,8 +6,14 @@ Big thanks to [John Lindquist](https://www.youtube.com/watch?v=WuiHuZq_cg4) for 
 
 ### Screenshots
 
-The left one is the todo app in phonegap. The right one is using the ionic framework for the same angular app.
+The first one is the todo app in phonegap. The second one is using the ionic framework for the same angular app.
+
+**Without ionic**
+
 ![Screenshot](screenshots/todo-angular-without-ionic.png)
+
+**With ionic**
+
 ![Screenshot](screenshots/todo-angular-with-ionic.png)
 
 
