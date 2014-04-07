@@ -1,56 +1,68 @@
-Ionic App Base
-=====================
+# ToDo
+The classic todo app in ionic Angular using node, bower for dependency management and bootstap for UI
 
-A starting project for Ionic that optionally supports
-using custom SCSS.
+Big thanks to [John Lindquist](https://www.youtube.com/watch?v=WuiHuZq_cg4) for the tutorial. The project starts with [AngularJS](http://angularjs.org/) web app.
 
-## Using this project
 
-We recommend using the `ionic` utility to create new Ionic projects that are based on this project but use a ready-made starter template.
+### Screenshots
 
-For example, to start a new Ionic project with the default tabs interface, make sure the `ionic` utility is installed:
+The left one is the todo app in phonegap. The right one is using the ionic framework for the same angular app.
+![Screenshot](screenshots/todo-angular-without-ionic.png)
+![Screenshot](screenshots/todo-angular-with-ionic.png)
 
-```bash
-$ sudo npm install -g ionic
+
+### Install Dependencies
+```
+npm install
 ```
 
-Then run:
+Behind the scenes this will also call `bower install`.  You should find that you have two new
+folders in your project.
 
-```bash
-$ sudo npm install -g ionic
-$ ionic start myProject tabs
+* `node_modules` - contains the npm packages for the tools we need
+* `bower_components` - contains the angular framework files
+
+## Directory Layout
+
+    app/                --> all of the files to be used in production
+      css/              --> css files
+        app.css         --> default stylesheet
+      img/              --> image files
+      index.html        --> app layout file (the main html template file of the app)
+      index-async.html  --> just like index.html, but loads js files asynchronously
+      js/               --> javascript files
+        app.js          --> application
+        controllers.js  --> application controllers
+        directives.js   --> application directives
+        filters.js      --> custom angular filters
+        services.js     --> custom angular services
+      partials/             --> angular view partials (partial html templates)
+        partial1.html
+        partial2.html
+
+    test/               --> test config and source files
+      protractor-conf.js    --> config file for running e2e tests with Protractor
+      e2e/                  --> end-to-end specs
+        scenarios.js
+      karma.conf.js         --> config file for running unit tests with Karma
+      unit/                 --> unit level specs/tests
+        controllersSpec.js      --> specs for controllers
+        directivessSpec.js      --> specs for directives
+        filtersSpec.js          --> specs for filters
+        servicesSpec.js         --> specs for services
+
+
+## Testing
+```
+npm test
 ```
 
-More info on this can be found on the Ionic [Getting Started](http://ionicframework.com/getting-started) page.
-
-## Installation
-
-While we recommend using the `ionic` utility to create new Ionic projects, you can use this repo as a barebones starting point to your next Ionic app.
-
-To use this project as is, first clone the repo from GitHub, then run:
-
-```bash
-$ cd ionic-app-base
-$ sudo npm install -g cordova ionic gulp
-$ npm install
-$ gulp init
-```
-
-## Using Sass (optional)
-
-This project makes it easy to use Sass (the SCSS syntax) in your projects. This enables you to override styles from Ionic, and benefit from
-Sass's great features.
-
-Just update the `./scss/ionic.app.scss` file, and run `gulp` or `gulp watch` to rebuild the CSS files for Ionic.
-
-Note: if you choose to use the Sass method, make sure to remove the included `ionic.css` file in `index.html`, and then uncomment
-the include to your `ionic.app.css` file which now contains all your Sass code and Ionic itself:
-
-```html
-<!-- IF using Sass (run gulp sass first), then remove the CSS include above
-<link href="css/ionic.app.css" rel="stylesheet">
--->
-```
-## Issues
-Issues have been disabled on this repo, if you do find an issue or have a question consider posting it on the [Ionic Forum](http://forum.ionicframework.com/).  Or else if there is truly an error, follow our guidelines for [submitting an issue](http://ionicframework.com/contribute/#issues) to the main Ionic repository. On the other hand, pull requests are welcome here!
-
+[git]: http://git-scm.com/
+[bower]: http://bower.io
+[npm]: https://www.npmjs.org/
+[node]: http://nodejs.org
+[protractor]: https://github.com/angular/protractor
+[jasmine]: http://pivotal.github.com/jasmine/
+[karma]: http://karma-runner.github.io
+[travis]: https://travis-ci.org/
+[http-server]: https://github.com/nodeapps/http-server
